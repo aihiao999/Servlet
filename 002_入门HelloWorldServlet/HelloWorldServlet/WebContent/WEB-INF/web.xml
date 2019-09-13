@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>HelloWorldServlet</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- 注册servlet, 名字叫做HWS, 具体的路径是com.lywgames.myservlet.HelloWorldServlet -->
+	<servlet>
+		<servlet-name>HWS</servlet-name>
+		<servlet-class>com.lywgames.myservlet.HelloWorldServlet</servlet-class>
+	</servlet>
+
+	<!-- 注册servlet的映射。 通过 servlet-name找到上面注册的具体servlet。 url-pattern: 在地址栏上的访问路径, 一定要以/打头 。-->
+	<servlet-mapping>
+		<servlet-name>HWS</servlet-name>
+		<url-pattern>/HWS.action</url-pattern>
+	</servlet-mapping>
+</web-app>
